@@ -102,6 +102,7 @@ class user_plugins extends rcube_plugin
 	}
 	function preferences_save($p)
 	{
+    		if( $p['section'] != 'user_plugins' ) return $p;
 		$Items = $this->getAllPlugins();
 		$PluginsOptV = array();
 		$PluginsBlk = array();
